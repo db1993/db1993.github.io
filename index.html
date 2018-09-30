@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="Zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -114,7 +114,7 @@
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="this is a good place">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale" content="Zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 <meta name="twitter:description" content="this is a good place">
@@ -174,7 +174,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="Zh-Hans">
 
   
   
@@ -347,7 +347,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2018-09-30 08:50:52" itemprop="dateModified" datetime="2018-09-30T08:50:52+08:00">2018-09-30</time>
+                <time title="Updated at: 2018-09-30 09:06:38" itemprop="dateModified" datetime="2018-09-30T09:06:38+08:00">2018-09-30</time>
               
             
           </span>
@@ -388,8 +388,22 @@
 4. 在电脑中找到C:\Windows\System32\drivers\etc中的hosts文件
 5. 打开此文件 最后位置添加   127.0.0.1   www.abc.com  127.0.0.1   www.abc.com
 6. 重启Apache
-</code></pre><h1 id="打开Apache软件"><a href="#打开Apache软件" class="headerlink" title="打开Apache软件"></a>打开Apache软件</h1><h2 id="1-打开配置文件-vhosts-ini"><a href="#1-打开配置文件-vhosts-ini" class="headerlink" title="1.打开配置文件 vhosts-ini"></a>1.打开配置文件 vhosts-ini</h2><pre><code>找到新增域名位置  
-</code></pre>
+</code></pre><h1 id="打开Apache软件"><a href="#打开Apache软件" class="headerlink" title="打开Apache软件"></a>打开Apache软件</h1><h2 id="1-打开配置文件-vhosts-ini"><a href="#1-打开配置文件-vhosts-ini" class="headerlink" title="1.打开配置文件 vhosts-ini"></a>1.打开配置文件 vhosts-ini</h2><ul>
+<li>找到新增域名位置</li>
+<li>在<code>&lt;Directory&gt;&lt;/Directory&gt;</code>标签后面的位置</li>
+<li>添加内容：<ul>
+<li>ProxyRequests Off </li>
+<li>ProxyPass  /api   <a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a> </li>
+<li>第一句：开启反向代理</li>
+<li>第二句：用/api 代替 <a href="http://localhosts:3000" target="_blank" rel="noopener">http://localhosts:3000</a> (其中的api可以任意设置)</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-代开配置文件-httpd-conf"><a href="#2-代开配置文件-httpd-conf" class="headerlink" title="2. 代开配置文件 httpd-conf"></a>2. 代开配置文件 httpd-conf</h2><ul>
+<li>查找 proxy_module 这一行  删除注释#号</li>
+<li>查找proxy_http_module  这一行  删除注释#号</li>
+</ul>
+<h2 id="3-重启Apache"><a href="#3-重启Apache" class="headerlink" title="3. 重启Apache"></a>3. 重启Apache</h2><h2 id="4-以后的ajax请求地址中的-http-localhost-3000-都用-api-代替"><a href="#4-以后的ajax请求地址中的-http-localhost-3000-都用-api-代替" class="headerlink" title="4. 以后的ajax请求地址中的 http://localhost:3000 都用 /api 代替"></a>4. 以后的ajax请求地址中的 <a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a> 都用 /api 代替</h2>
           
         
       
