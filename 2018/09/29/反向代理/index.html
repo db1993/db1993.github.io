@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="首先先配置好 一个Apache域名访问1. 打开Apache软件 2. 打开站点域名管理 3. 设置域名 域名目录 点击新增 保存 4. 在电脑中找到C:\Windows\System32\drivers\etc中的hosts文件 5. 打开此文件 最后位置添加   127.0.0.1   www.abc.com  127.0.0.1   www.abc.com 6. 重启Apache 打开Apa">
 <meta property="og:locale" content="Zh-Hans">
-<meta property="og:updated_time" content="2018-09-30T01:06:38.436Z">
+<meta property="og:updated_time" content="2018-09-30T02:13:53.070Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="反向代理">
 <meta name="twitter:description" content="首先先配置好 一个Apache域名访问1. 打开Apache软件 2. 打开站点域名管理 3. 设置域名 域名目录 点击新增 保存 4. 在电脑中找到C:\Windows\System32\drivers\etc中的hosts文件 5. 打开此文件 最后位置添加   127.0.0.1   www.abc.com  127.0.0.1   www.abc.com 6. 重启Apache 打开Apa">
@@ -344,7 +344,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2018-09-30 09:06:38" itemprop="dateModified" datetime="2018-09-30T09:06:38+08:00">2018-09-30</time>
+                <time title="Updated at: 2018-09-30 10:13:53" itemprop="dateModified" datetime="2018-09-30T10:13:53+08:00">2018-09-30</time>
               
             
           </span>
@@ -383,7 +383,7 @@
 4. 在电脑中找到C:\Windows\System32\drivers\etc中的hosts文件
 5. 打开此文件 最后位置添加   127.0.0.1   www.abc.com  127.0.0.1   www.abc.com
 6. 重启Apache
-</code></pre><h1 id="打开Apache软件"><a href="#打开Apache软件" class="headerlink" title="打开Apache软件"></a>打开Apache软件</h1><h2 id="1-打开配置文件-vhosts-ini"><a href="#1-打开配置文件-vhosts-ini" class="headerlink" title="1.打开配置文件 vhosts-ini"></a>1.打开配置文件 vhosts-ini</h2><ul>
+</code></pre><h1 id="打开Apache软件"><a href="#打开Apache软件" class="headerlink" title="打开Apache软件"></a>打开Apache软件</h1><h2 id="1-打开配置文件-vhosts-conf"><a href="#1-打开配置文件-vhosts-conf" class="headerlink" title="1.打开配置文件 vhosts-conf"></a>1.打开配置文件 vhosts-conf</h2><ul>
 <li>找到新增域名位置</li>
 <li>在<code>&lt;Directory&gt;&lt;/Directory&gt;</code>标签后面的位置</li>
 <li>添加内容：<ul>
@@ -562,7 +562,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#首先先配置好-一个Apache域名访问"><span class="nav-number">1.</span> <span class="nav-text">首先先配置好 一个Apache域名访问</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打开Apache软件"><span class="nav-number">2.</span> <span class="nav-text">打开Apache软件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-打开配置文件-vhosts-ini"><span class="nav-number">2.1.</span> <span class="nav-text">1.打开配置文件 vhosts-ini</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-代开配置文件-httpd-conf"><span class="nav-number">2.2.</span> <span class="nav-text">2. 代开配置文件 httpd-conf</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-重启Apache"><span class="nav-number">2.3.</span> <span class="nav-text">3. 重启Apache</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-以后的ajax请求地址中的-http-localhost-3000-都用-api-代替"><span class="nav-number">2.4.</span> <span class="nav-text">4. 以后的ajax请求地址中的 http://localhost:3000 都用 /api 代替</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#首先先配置好-一个Apache域名访问"><span class="nav-number">1.</span> <span class="nav-text">首先先配置好 一个Apache域名访问</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打开Apache软件"><span class="nav-number">2.</span> <span class="nav-text">打开Apache软件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-打开配置文件-vhosts-conf"><span class="nav-number">2.1.</span> <span class="nav-text">1.打开配置文件 vhosts-conf</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-代开配置文件-httpd-conf"><span class="nav-number">2.2.</span> <span class="nav-text">2. 代开配置文件 httpd-conf</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-重启Apache"><span class="nav-number">2.3.</span> <span class="nav-text">3. 重启Apache</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-以后的ajax请求地址中的-http-localhost-3000-都用-api-代替"><span class="nav-number">2.4.</span> <span class="nav-text">4. 以后的ajax请求地址中的 http://localhost:3000 都用 /api 代替</span></a></li></ol></li></ol></div>
             
 
           </div>
